@@ -3,9 +3,13 @@
 
 // Write your JavaScript code.
 
-//$(document).ready(function () {
-//    $('ul li a').click(function () {
-//        $(' ul li a').removeClass("active");
-//        $(this).addClass("active");
-//    })
-//})
+$(document).ready(function () {
+    $("li a").each(function () {
+        /*  console.log($(this).attr("href"));*/
+        /*  console.log(window.location.pathname)*/
+        if ($(this).attr("href") == window.location.pathname) {
+            $(this).addClass("active")
+
+        }
+    })
+})
