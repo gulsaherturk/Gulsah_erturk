@@ -1,0 +1,97 @@
+﻿*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.container{
+    /* border: 1px solid red; */
+    /* width: 100%;*/
+   /* height: 100%; */
+   
+}
+
+
+.nav{
+    /* border:1px solid rgb(194, 191, 191); */
+    font-size: 15px !important;
+    font-weight: bold;
+    width: 100%;
+}
+.nav-link{
+    border: 1px solid rgb(238, 238, 238) !important;
+    color: black;
+    border-radius: 1px !important;
+    /* width: 143px; */
+
+}
+.nav-link:hover{
+    background-color: black;
+    color: white;
+}
+
+.social-media{
+    position: absolute;
+
+      right: -13px;
+      /* position: fixed; */
+
+      top: 200px;
+      width: 400px !important;
+}
+.card-text{
+    font-size: 30px !important;
+}
+.card-title{
+    font-size: 17px;
+    color: black;
+    font-weight: bold;
+}
+.list-group{
+    height: 60px !important;
+    
+}
+.agora .card .card-text{
+    height: 25px !important;
+    font-size: 10px !important;
+    font-weight: bold;
+ 
+    
+} 
+
+ article .row
+{
+    margin: 10px;
+    padding: 0px;
+    width: 70% !important;
+    font-size: 20px !important;
+}
+.card-header{
+    font-weight: bold;
+    background-color: rgb(238, 238, 238);
+}
+.card-body{
+    border: 1px solid rgb(238, 238, 238) !important;
+}
+.sustainability .card .row{
+    width: 99% !important;
+   
+}
+.sustainability .card .row .card-title{
+    font-size: 20px !important;
+}
+.sustainability .card .row .card-text{
+    font-size: 20px !important;
+    
+}
+
+.fitted .card .row{
+    width: 99% !important;
+}
+
+.fitted .card .row .card-title{
+    font-size: 20px !important;
+
+}
+.fitted .card .row .card-text{
+    font-size: 20px !important;
+}
