@@ -38,13 +38,25 @@
       top: 200px;
       width: 400px !important;
 }
+.social-media a{
+    text-decoration: none;
+    color: black;
+}
+
 .card-text{
     font-size: 30px !important;
+
+    text-decoration: none;
+    
+    
 }
-.card-title{
+ .card-title{
     font-size: 17px;
     color: black;
     font-weight: bold;
+  
+  
+
 }
 .list-group{
     height: 60px !important;
@@ -54,7 +66,7 @@
     height: 25px !important;
     font-size: 10px !important;
     font-weight: bold;
- 
+
     
 } 
 
@@ -64,7 +76,12 @@
     padding: 0px;
     width: 70% !important;
     font-size: 20px !important;
+  
 }
+article a{
+    text-decoration: none;
+}
+
 .card-header{
     font-weight: bold;
     background-color: rgb(238, 238, 238);
@@ -78,9 +95,12 @@
 }
 .sustainability .card .row .card-title{
     font-size: 20px !important;
+    
+
 }
 .sustainability .card .row .card-text{
     font-size: 20px !important;
+   
     
 }
 
@@ -90,6 +110,7 @@
 
 .fitted .card .row .card-title{
     font-size: 20px !important;
+
 
 }
 .fitted .card .row .card-text{
