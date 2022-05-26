@@ -1,0 +1,17 @@
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Business.deps.json
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Business.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\ref\MiniShopApp.Business.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Business.pdb
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Data.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Entity.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Data.pdb
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\bin\Debug\net5.0\MiniShopApp.Entity.pdb
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.csproj.CopyComplete
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\ref\MiniShopApp.Business.dll
+C:\Users\ACER\Desktop\Yeni klasör (4)\MiniShopApp\MiniShopApp.Business\obj\Debug\net5.0\MiniShopApp.Business.pdb
