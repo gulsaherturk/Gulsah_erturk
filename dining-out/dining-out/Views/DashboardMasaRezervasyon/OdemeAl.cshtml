@@ -1,0 +1,139 @@
+﻿@model OdemeAlVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard Masa Rezervasyon Ödeme Al";
+}
+
+<form asp-action="OdemeYap" asp-controller="DashboardMasaRezervasyon" asp-route-masaRezervationId="@Model.MasaRezervationId" method="post">
+    <div class="shadow p-3  bg-white rounded">
+        <div class="container">
+            <div class="py-5 text-center">
+                <h2 class="text-primary">Masa Rezervasyon Ödeme Sayfası</h2>
+                <p class="lead"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 order-md-1 mb-4">
+                <h4 class="mb-3 text-primary">Siparişler</h4>
+                <hr class="mb-4">
+                <ul class="list-group mb-3">
+                    @for (int i = 0; i < Model.BookTableOrderedItemsVM.Count; ++i)
+                    {
+                        <li class="list-group-item d-flex justify-content-between lh-condensed">
+                            <div>
+                                <h6 class="my-0">@Model.BookTableOrderedItemsVM[i].MenuItemName</h6>
+                                <small class="text-muted">
+                                    <span class="text-primary">Siparişi Veren : </span>@Model.BookTableOrderedItemsVM[i].UserName
+                                    <span class="text-primary">Ödeme Yapan : </span> @Model.BookTableOrderedItemsVM[i].PurchasedUserName
+                                </small>
+                            </div>
+                            <span class="text-muted"><span class="text-danger">@Model.BookTableOrderedItemsVM[i].Price TL</span></span>
+                        </li>
+
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].Id)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].MenuItemId)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].MenuItemName)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].OrderedDate)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].Price)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].PurchasedUserName)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].RezervationId)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].Status)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].StatusText)
+                        @Html.HiddenFor(modelItem => Model.BookTableOrderedItemsVM[i].UserName)
+
+                    }
+
+                    @if (Model.Promosyon != null && Model.Promosyon.Count() > 0)
+                    {
+                        <li class="list-group-item d-flex justify-content-between bg-light">
+                            <div class="text-success">
+                                <h6 class="my-0">Promosyon Kodu</h6>
+                                <small>@Model.Promosyon</small>
+                            </div>
+                            <span class="text-success">-@Model.PromosyonMiktari TL</span>
+                        </li>
+                    }
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Toplam (TL)</span>
+                        <strong>@Model.Toplam TL</strong>
+                    </li>
+                </ul>
+
+                <input type="hidden" asp-for="Toplam" name="Toplam" id="Toplam" value="@Model.Toplam" class="form-control">
+                <input type="hidden" asp-for="MasaRezervationId" name="MasaRezervationId" id="MasaRezervationId" value="@Model.MasaRezervationId" class="form-control">
+                <input type="hidden" asp-for="PromosyonMiktari" name="PromosyonMiktari" id="PromosyonMiktari" value="@Model.PromosyonMiktari" class="form-control">
+    
+                <div class="input-group">
+                    <input type="text" asp-for="Promosyon" name="Promosyon" id="Promosyon" class="form-control" placeholder="Kupon Kodu">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-secondary" name="kuponUygula">Kupon Uygula</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 order-md-2 mb-4">
+
+                <h4 class="mb-3 text-primary">Ödeme</h4>
+                <hr class="mb-4">
+
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="CartType" asp-for="CartType" type="radio" value="CreditCard" class="custom-control-input">
+                        <label class="custom-control-label" for="credit">Kredi Kartı</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="debit" name="CartType" asp-for="CartType" type="radio" value="DebitCard" class="custom-control-input">
+                        <label class="custom-control-label" for="debit">Debit Kart</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-name">Kart Üzerindeki İsim</label>
+                        <input type="text" class="form-control" id="cc-name" name="CartHolder" placeholder="">
+                        <small class="text-muted">Kart üzerindeki tüm isim</small>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-number">Kredi Kartı Numarası</label>
+                        <input type="text" class="form-control" id="cc-number" name="CartNumber" placeholder="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">Geçerlilik Tarihi</label>
+                        <input type="text" class="form-control" id="cc-expiration" name="CardValidDate" placeholder="">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">Güvenlik Kodu</label>
+                        <input type="text" class="form-control" id="cc-cvv" name="CardSecurityNumber" placeholder="">
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-primary btn-lg btn-block" type="submit" name="odemeYap">Ödeme Yap</button>
+
+            </div>
+            <div class="col-md-6 order-md-3">
+            </div>
+            <div class="col-md-6 order-md-4">
+                @if (ViewBag.BasariliOdeme != null && ViewBag.BasariliOdeme == false)
+                {
+                    <br />
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.Mesaj
+                    </div>
+                }
+                else if (ViewBag.BasariliOdeme != null && ViewBag.BasariliOdeme == true)
+                {
+                    <br />
+                    <div class="alert alert-success" role="alert">
+                        @ViewBag.Mesaj - <a asp-controller="DashboardMasaRezervasyon"
+                                            asp-action="Index"
+                                            asp-route-masaRezervationId="@Model.MasaRezervationId">
+                                            Rezervasyon Sayfası için...</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</form>

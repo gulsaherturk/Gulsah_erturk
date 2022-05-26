@@ -1,0 +1,33 @@
+﻿@model LoginVM
+
+@{
+    ViewData["Title"] = "Giris Yap";
+}
+
+<link href="~/css/login.css" rel="stylesheet">
+
+<br />
+<br />
+<br />
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <h2 class="text-primary">Giriş</h2>
+        </div>
+
+        <!-- Login Form -->
+        <form asp-action="GirisYap" asp-controller="Login" method="post">
+            <input type="text" id="login" class="fadeIn second border-info placeicon" name="Username"  placeholder="Kullanıcı Adı">
+            <input type="text" id="password" class="fadeIn third border-info placeicon" name="Password"  placeholder="Parola">
+            <input type="submit" class="fadeIn fourth" value="Giriş Yap">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Parolamı unuttum!!!</a>
+        </div>
+
+    </div>
+</div>

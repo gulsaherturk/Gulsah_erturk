@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Utility/dining-out.Utility.csproj": {}
+  },
+  "projects": {
+    "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/dining-out.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/dining-out.Models.csproj",
+        "projectName": "dining-out.Models",
+        "projectPath": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/dining-out.Models.csproj",
+        "packagesPath": "/Users/cetin/.nuget/packages/",
+        "outputPath": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/cetin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Utility/dining-out.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Utility/dining-out.Utility.csproj",
+        "projectName": "dining-out.Utility",
+        "projectPath": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Utility/dining-out.Utility.csproj",
+        "packagesPath": "/Users/cetin/.nuget/packages/",
+        "outputPath": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Utility/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/cetin/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/dining-out.Models.csproj": {
+                "projectPath": "/Users/cetin/Desktop/workspaces-wsc/dining-out/dining-out.Models/dining-out.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

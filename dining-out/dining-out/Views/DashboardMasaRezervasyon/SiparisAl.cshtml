@@ -1,0 +1,135 @@
+﻿@model SiparisAlVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard Masa Rezervasyon Sipariş Al";
+}
+
+<form asp-action="SiparisEkle" asp-controller="DashboardMasaRezervasyon" asp-route-masaRezervationId="@Model.MasaRezervationId" method="post">
+    <div class="shadow p-3  bg-white rounded">
+        <div class="form-row">
+            <div class="col-lg-1 ">
+            </div>
+            <div class="col-lg-10 form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center"><h4 class="text-primary">Restaurant Detayı</h4></div>
+                    <div class="panel-body">
+                        <div class="card">
+                            <img class="card-img-top" style="height: 150px;" src="@Model.restaurantVM.CoverImg" alt="@Model.restaurantVM.CoverImg">
+                            <div class="card-body">
+                                <h5 class="card-title">@Model.restaurantVM.Name</h5>
+                                <p class="card-text">@Model.restaurantVM.Desc</p>
+                                <a asp-controller="MasaRezervasyon"
+                                   asp-action="Index"
+                                   asp-route-restaurantId="@Model.restaurantVM.Id"
+                                   class="btn btn-primary"> Diğer Rezervasyon Yap </a>
+                            </div>
+                            <div class="card-footer text-right">
+                                <small class="text-muted">@Model.restaurantVM.LastRezervationText</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-lg-1 ">
+            </div>
+            <div class="col-lg-10 form-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center"></div>
+                    <div class="panel-body">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="text-primary text-center">Menü İçeriği</h4>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    @if (Model.menuItemsVM != null && Model.menuItemsVM.Count > 0)
+                                    {
+                                        <table id="bookattendees-table" class="table table-striped table-bordered" style="width:95%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Seçim</th>
+                                                    <th>Kategori</th>
+                                                    <th>Menü Seçimi</th>
+                                                    <th>İçindekiler</th>
+                                                    <th>Fiyat</th>
+                                                    <th>Siparişi Veren</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @for (int i = 0; i < Model.menuItemsVM.Count; ++i)
+                                                {
+                                                    <tr>
+                                                        <th class="text-center">
+                                                            <input class="form-check-input" type="checkbox" name="secilenMenuItem_@Model.menuItemsVM[i].Id">
+                                                        </th>
+                                                        <td>@Model.menuItemsVM[i].Category.CategoryName</td>
+                                                        <td>@Model.menuItemsVM[i].MenuItemName</td>
+                                                        <td>@Model.menuItemsVM[i].MenuItemIngredients</td>
+                                                        <td>@Model.menuItemsVM[i].Price</td>
+                                                        <td>
+                                                            <select class="form-select" name="menuSecimiYapan_@Model.menuItemsVM[i].Id">
+                                                                @foreach (var attendee in Model.rezervationVM.Attendees)
+                                                                {
+                                                                    <option value="@attendee.UserName">@attendee.UserName</option>
+                                                                }
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-primary">Bu restaurant henüz menü düzenlemesi yapmamış</span>
+                                    }
+                                </p>
+                                @if (Model.menuItemsVM != null && Model.menuItemsVM.Count > 0)
+                                {
+                                    <p class="card-text">
+                                        <div class="form-row">
+                                            <div class="col-lg-10">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="submit" name="masaRezervasyonSiparisVer" value="masaRezervasyonSiparisVer" class="btn btn-primary">Sipariş Ver</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-lg-12 ">
+                                                @if (ViewBag.BasariliSiparis != null && ViewBag.BasariliSiparis == false)
+                                                {
+                                                    <br />
+                                                    <div class="alert alert-danger" role="alert">
+                                                        @ViewBag.Mesaj
+                                                    </div>
+                                                }
+                                                else if (ViewBag.BasariliSiparis != null && ViewBag.BasariliSiparis == true)
+                                                {
+                                                    <br />
+                                                    <div class="alert alert-success" role="alert">
+                                                        @ViewBag.Mesaj - <a asp-controller="DashboardMasaRezervasyon"
+                                                                            asp-action="Index"
+                                                                            asp-route-masaRezervationId="@Model.MasaRezervationId">
+                                                            Rezervasyon Sayfası için...
+                                                        </a>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </p>
+                                }
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </div>
+</form>

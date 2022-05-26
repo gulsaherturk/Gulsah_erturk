@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{0252D707-0A96-4566-B9A9-6E538BE5BD24}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="dining-out/Controllers/AnasayfaController.cs">
+    <Files>
+      <File FileName="dining-out/Controllers/AnasayfaController.cs" Line="98" Column="13" />
+      <File FileName="dining-out/Views/Anasayfa/RestaurantSearchResult.cshtml" Line="8" Column="22" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="dining-out" expanded="True">
+            <Node name="dining-out.WebUI" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AnasayfaController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Anasayfa" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.dining-out.WebUI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

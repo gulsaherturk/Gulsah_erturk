@@ -1,0 +1,81 @@
+﻿@model RestaurantSearchVM
+
+<div class="text-center">
+    <fieldset class="form-group">
+        <form asp-action="RestaurantSearch" asp-controller="Anasayfa" method="get">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Restaurant İsmi">
+                </div>
+                <div class="col">
+                    <select asp-for="CityId" class="form-control" id="SelectedCityId">                      
+                        @foreach (var city in ViewBag.CitiesData)
+                        {
+                            <option value="@city.Key">@city.Value</option>
+                        }
+                    </select>
+                </div>
+                <div class="col">
+                    <select asp-for="DistrictId" class="form-control" id="SelectedDistrictId">
+                        @foreach (var district in ViewBag.DistrictiesData)
+                        {
+                            <option value="@district.Key">@district.Value</option>
+                        }
+                    </select>
+                </div>
+                <div class="col">
+                    <select asp-for="Capacity" class="form-control">
+                        @foreach (var city in ViewBag.KisilerData)
+                        {
+                            <option value="@city.Key">@city.Value</option>
+                        }
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" asp-for="BookTableDate"/>
+                            <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker1').datetimepicker();
+                    });
+                </script>
+
+                <div class="col">
+                    <button type="submit" class=" btn btn-primary">Restaurant Ara</button>
+                </div>
+                </div>
+        </form>
+    </fieldset>
+</div>
+
+<script type="text/javascript">
+    $("#SelectedCityId").change(function () {
+        $("#SelectedDistrictId").empty();
+        var city = $("#SelectedCityId").val();
+
+        $.ajax({
+            url: '@Url.Action("GetDistrictiesByCity", "Anasayfa")',
+            type: "POST",
+            dataType: "json",
+            data: { cityId: city },
+            success: function (data) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var district = data[i];
+                    var opt = $("<option></option>");
+                    opt.val(district.key);
+                    opt.text(district.value);
+                    console.log(opt);
+                    $("#SelectedDistrictId").append(opt);
+                }
+            }
+        });
+    });
+</script>

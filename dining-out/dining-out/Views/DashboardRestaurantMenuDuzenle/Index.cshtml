@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard Restaurant Menü Düzenleme";
+}
+
+@model MenuVm
+
+<br />
+<div id="AllForms">
+    <form method="post" data-ajax="true" asp-route-restaurantId="@Model.Restaurant.Id" asp-action="MenuItemEkle" asp-controller="DashboardRestaurantMenuDuzenle" data-ajax-method="post" data-ajax-update="#AllMenuItems">
+        <div class="shadow p-3 mb-5 bg-white rounded text-center">
+            <div class="form-row text-center">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-md-8">
+                    <h3 class="text-primary">Menü Düzenleme Formu</h3>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            @Html.HiddenFor(md => md.menuItem.Id)
+            <div class="form-row text-center">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    @Html.TextBoxFor(md => md.menuItem.MenuItemName, new { placeholder = "Menü Öğe İsmi", @class = "form-control" })
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    @Html.TextBoxFor(md => md.menuItem.Price, new { placeholder = "Fiyat", @class = "form-control" })
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    @Html.TextAreaFor(md => md.menuItem.MenuItemDescription, new { placeholder = "Menü Öğe Açıklaması", @class = "form-control" })
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    @Html.TextAreaFor(md => md.menuItem.MenuItemIngredients, new { placeholder = "Menü Öğe İçindekiler", @class = "form-control" })
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8 col-md-6 form-group">
+                    @Html.TextBoxFor(md => md.menuItem.Category.CategoryName, new { placeholder = "Menü Öğe Kategorisi", @class = "form-control" })
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8 col-md-6 form-group">
+                    <button type="submit" name="menuItemAddButton" value="submitMenuItem" class="btn btn-primary float-right mt-6">Ekle</button>
+                </div>
+                <div class="col-lg-2">
+                </div>
+            </div>
+
+            <div class="shadow p-3 mb-5 bg-white rounded text-center" id="AllMenuItems">
+                <div class="form-row">
+                    <div class="col-lg-12">
+                        @Html.Partial("_AllMenuItems", Model)
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+</div>
+
+
+

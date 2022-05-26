@@ -1,0 +1,202 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard Restaurant Ekle";
+}
+
+@model RestaurantVM
+
+<style type="text/css">
+    .custom-file-input.selected:lang(en)::after {
+        content: "" !important;
+    }
+
+    .custom-file-input-cover.selected:lang(en)::after {
+        content: "" !important;
+    }
+
+    .custom-file {
+        overflow: hidden;
+    }
+
+    .custom-file-input {
+        white-space: nowrap;
+    }
+
+    .custom-file-input-cover {
+        white-space: nowrap;
+    }
+</style>
+
+<br />
+<div>
+    <div class="shadow p-3 mb-5 bg-white rounded text-center">
+        <form asp-action="Ekle" asp-controller="DashboardRestaurantEkle" method="post" enctype="multipart/form-data">
+            <div class="form-row">
+                <div class="form-group col-lg-12 col-md-6">
+                    @if (ViewBag.Basarili != null && ViewBag.Basarili == true)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            Restaurant kayıt işlemi başarıyla gerçekleştirilmiştir.
+                            <a asp-area="" asp-controller="DashboardRestaurant" asp-action="Index">Restaurantlar Bölümüne Gidebilirsiniz</a>
+                        </div>
+                    }
+                    else if (ViewBag.Basarili != null && ViewBag.Basarili == false)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.hataMesaji
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="form-row text-center">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-md-8">
+                    <h2 class="text-primary">Restaurant Ekleme Formu</h2>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <input type="text" class="form-control" name="Name" id="Name" placeholder="Restaurant İsmi">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <input type="text" class="form-control" name="SystemDefinitionName" id="SystemDefinitionName" placeholder="Sistem Restaurant İsmi">
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <select asp-for="CityId" class="form-control" id="selectedCityId">
+                        @foreach (var city in ViewBag.CitiesData)
+                        {
+                            <option value="@city.Key">@city.Value</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <select asp-for="DistrictId" class="form-control" id="districtId">
+                        @foreach (var district in ViewBag.DistrictiesData)
+                        {
+                            <option value="@district.Key">@district.Value</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8 col-md-6 form-group">
+                    <textarea class="form-control" name="Address" id="Address" placeholder="Açık Adres" rows="2"></textarea>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8 col-md-6 form-group">
+                    <textarea class="form-control" name="Desc" id="Desc" placeholder="Açıklama" rows="10"></textarea>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <input class="form-control" type="number" name="Capacity" id="Capacity" placeholder="Kapasite">
+                </div>
+                <div class="col-lg-4 col-md-6 form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="LogoFile" id="LogoFile" aria-describedby="LogoFile">
+                            <label class="custom-file-label" for="LogoFile">Logo Seç</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="LogoFile">Logo Yükle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8 col-md-6 form-group">
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input-cover" name="CoverImgFile" id="CoverImgFile" aria-describedby="CoverImgFile">
+                            <label class="custom-file-label" for="CoverImgFile">Kapat Photo Seç</label>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="CoverImgFile">Kapat Photo Yükle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-2 ">
+                </div>
+                <div class="col-lg-8">
+                    <button type="submit" name="submitButton2" value="submitAll" class="btn btn-primary float-right mt-6">Ekle</button>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    $("#selectedCityId").change(function () {
+        $("#districtId").empty();
+        var city = $("#selectedCityId").val();
+
+        $.ajax({
+            url: '@Url.Action("GetDistrictiesByCity", "Anasayfa")',
+            type: "POST",
+            dataType: "json",
+            data: { cityId: city },
+            success: function (data) {
+                console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    var district = data[i];
+                    var opt = $("<option></option>");
+                    opt.val(district.key);
+                    opt.text(district.value);
+                    console.log(opt);
+                    $("#districtId").append(opt);
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+    document.querySelector('.custom-file-input').addEventListener('change', function (e) {
+        var name = document.getElementById("LogoFile").files[0].name;
+        var nextSibling = e.target.nextElementSibling
+        nextSibling.innerText = name
+    })
+
+    document.querySelector('.custom-file-input-cover').addEventListener('change', function (e) {
+        var name = document.getElementById("CoverImgFile").files[0].name;
+        var nextSibling = e.target.nextElementSibling
+        nextSibling.innerText = name
+    })
+
+</script>

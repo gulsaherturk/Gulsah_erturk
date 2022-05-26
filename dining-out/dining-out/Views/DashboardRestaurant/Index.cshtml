@@ -1,0 +1,63 @@
+﻿@model DashboardRestaurantVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard Restaurantlar";
+}
+
+<br />
+<div>
+    <div class="p-3 mb-5 float-right">
+        <a asp-controller="DashboardRestaurantEkle" asp-action="Index" class="btn btn-primary">Yeni Restaurant Ekle</a>
+    </div>
+    <div class="shadow p-3 mb-5 bg-white rounded text-center">
+        @if (Model.Restaurants != null && Model.Restaurants.Count > 0)
+        {
+            <table id="newrez-table" class="table table-striped table-bordered" style="width:95%">
+                <thead>
+                    <tr>
+                        <th>Restaurant Numarası</th>
+                        <th>Restaurant İsmi</th>
+                        <th>Restaurant Sistem İsmi</th>
+                        <th>Restaurant Şehir</th>
+                        <th>Restaurant İlçe</th>
+                        <th>Restaurant Kapasite</th>
+                        <th>Yeni Rezervasyonlu Masalar</th>
+                        <th>Aktif Rezervasyonlu Masalar</th>
+                        <th>Geçmiş Rezervasyonlu Masalar</th>
+                        <th>Menü Düzenle</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var restaurant in Model.Restaurants)
+                    {
+                    <tr>
+                        <td>@restaurant.Id</td>
+                        <td>@restaurant.Name</td>
+                        <td>@restaurant.SystemDefinitionName</td>
+                        <td>@restaurant.City</td>
+                        <td>@restaurant.District</td>
+                        <td>@restaurant.Capacity</td>
+                        <td>@restaurant.NewBookingCount</td>
+                        <td>@restaurant.ApprovedBookingCount</td>
+                        <td>@restaurant.ClosedBookingCount</td>
+                        <td>
+                            <a asp-controller="DashboardRestaurantMenuDuzenle"
+                               asp-action="Index"
+                               asp-route-restaurantId="@restaurant.Id">
+                                <i class="bi bi-arrow-right-circle-fill" style="font-size: 2rem; color: cornflowerblue;">
+                                </i>
+                            </a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <span class="text-primary">Kayıt Bulunmamaktadır</span>
+        }
+    </div>
+</div>

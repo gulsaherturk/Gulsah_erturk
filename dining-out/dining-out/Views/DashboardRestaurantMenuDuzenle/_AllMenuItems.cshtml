@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Dashboard Restaurant Menü Düzenleme";
+    int counter = 0;
+}
+
+@model MenuVm
+
+@using (Html.BeginForm("MenuKaydet", "DashboardRestaurantMenuDuzenle", FormMethod.Post, new { restaurantId = Model.RestaurantId }))
+{
+    <div class="form-row">
+        <div class="col-lg-2 ">
+        </div>
+        <div class="col-lg-8 form-group">
+            <h3 class="text-primary">@Model.Restaurant.SystemDefinitionName Menü</h3>
+        </div>
+        <div class="col-lg-2 ">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-lg-2 ">
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" class="form-control" name="MenuName" id="MenuName" placeholder="Menü İsmi">
+        </div>
+        <div class="col-lg-4 col-md-6 form-group">
+            <input type="text" class="form-control" name="Description" id="Description" placeholder="Menü Açıklama">
+        </div>
+        <div class="col-lg-2 ">
+        </div>
+    </div>
+
+    @if (Model != null && Model.MenuItems != null && Model.MenuItems.Count > 0)
+    {
+        foreach (string key in Model.MenuItemsDictionary.Keys)
+        {
+            <div class="form-row" style="margin-bottom:10px;">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 text-center">
+                    <h4 class="text-info">@key</h4>
+                </div>
+                <div class="col-lg-2 ">
+                </div>
+            </div>
+
+            for (int i = counter; i < counter + Model.MenuItemsDictionary[key].Count; i++)
+            {
+                <div class="form-row" style="margin-bottom:10px;">
+                    <div class="col-lg-2">
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card border-info text-left">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        @Html.DisplayFor(modelItem => Model.MenuItems[i].MenuItemName)
+                                    </div>
+                                    <div class="col-lg-6 text-danger text-right ">
+                                        @Html.DisplayFor(modelItem => Model.MenuItems[i].Price) TL
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body text-info">
+                                <h5 class="card-title">@Html.DisplayFor(modelItem => Model.MenuItems[i].MenuItemDescription)</h5>
+                                <p class="card-text">@Html.DisplayFor(modelItem => Model.MenuItems[i].MenuItemIngredients)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 ">
+                    </div>
+                </div>
+
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].Id)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].MenuItemName)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].Price)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].MenuItemDescription)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].MenuItemIngredients)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].Category.Id)
+                @Html.HiddenFor(modelItem => Model.MenuItems[i].Category.CategoryName)
+
+            }
+
+            { counter = Model.MenuItemsDictionary[key].Count; }
+        }
+
+    }
+
+    <div class="form-row">
+        <div class="col-lg-2 ">
+        </div>
+        <div class="col-lg-8">
+            <button type="submit" name="mainSaveButton" value="submitAll" class="btn btn-primary float-right mt-6">Kaydet</button>
+        </div>
+        <div class="col-lg-2 ">
+        </div>
+    </div>
+    <br />
+    <div class="form-row">
+        <div class="col-lg-2 ">
+        </div>
+        <div class="col-lg-8">
+            @if (ViewBag.Basarili != null && ViewBag.Basarili == true)
+            {
+                <div class="alert alert-success" role="alert">
+                    Restaurant Menü Değişiklik işlemi başarıyla gerçekleştirilmiştir.
+                    <a asp-area="" asp-controller="DashboardRestaurant" asp-action="Index">Restaurantlar Bölümüne Gidebilirsiniz</a>
+                </div>
+            }
+            else if (ViewBag.Basarili != null && ViewBag.Basarili == false)
+            {
+                <div class="alert alert-danger" role="alert">
+                    @ViewBag.hataMesaji
+                </div>
+            }
+        </div>
+        <div class="col-lg-2 ">
+        </div>
+    </div>
+}

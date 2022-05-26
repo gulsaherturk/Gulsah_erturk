@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Üye Ol";
+}
+
+@model UyeOLVM
+
+<section class="testimonial py-5" id="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-4 py-5 bg-primary text-white text-center ">
+                <div class=" ">
+                    <div class="card-body">
+                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                        <h2 class="py-3">Üye Ol Sayfası</h2>
+                        <p>
+                            Dining out uygulamasına üye olarak rezervasyonlarını sanal masa oluşturarak önceden yönetebilir ve Restaurant henüz gitmeden siparişlerinizi oluşturabilirsiniz ve
+                            eğlencenizin sonunda ödeme karmaşıkları yaşamadan sistem üzerinden ödemelerinizi arkadaşlarınız ile gerçekleştirebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 py-5 border">
+                <h4 class="pb-4">Lütfen Aşağıdaki Detayları Doldurunuz</h4>
+                <form asp-action="UyeOl" asp-controller="UyeOl" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input id="Name" name="Name" placeholder="İsminiz" class="form-control" type="text">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="Lastname" name="Lastname" placeholder="Soy İsminiz" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input id="UserName" name="UserName" placeholder="E-Mailiniz" class="form-control" type="text">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input id="Password" name="Password" placeholder="Parolanız" class="form-control" type="password">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <select id="UserType" name="UserType" class="form-control">
+                                @if (ViewBag.UserType=="1")
+                                {
+                                    <option value="1" disabled selected> Kullanıcı Olarak Kayıt Ol</option>
+                                }
+                                else if (ViewBag.UserType=="2")
+                                {
+                                    <option value="2" disabled selected> Restaurant Olarak Kayıt Ol</option>
+                                }
+                                else{
+                                    <option value="1"> Kullanıcı Olarak Kayıt Ol</option>
+                                    <option value="2"> Restaurant Olarak Kayıt Ol</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <textarea id="Description" name="Description" cols="40" rows="5" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                                    <label class="form-check-label" style="margin-left:30px;" for="invalidCheck2">
+                                        <small>   Tıklayarak, Hüküm ve Koşullarımızı, Ziyaretçi Sözleşmemizi ve Gizlilik Politikamızı kabul etmiş olursunuz.</small>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <button class="btn btn-danger" type="submit">Üye Ol</button>
+                    </div>
+                    <br />
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            @if (ViewBag.Basarili != null && ViewBag.Basarili == true)
+                            {
+                                <div class="alert alert-success" role="alert">
+                                    Kayıt işleminiz gerçekleşmiştir. Sisteme Login olarak masa rezervasyonu yapabilirsiniz.
+                                </div>
+                            }
+                            else if (ViewBag.Basarili != null && ViewBag.Basarili == false)
+                            {
+                                <div class="alert alert-danger" role="alert">
+                                    @ViewBag.hataMesaji
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <br />
+        </div>
+</section>

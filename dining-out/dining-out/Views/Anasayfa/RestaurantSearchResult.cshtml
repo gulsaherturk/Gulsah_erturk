@@ -1,0 +1,35 @@
+﻿<style type="text/css">
+    .card {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div>
+    <div class="row">
+        @if (ViewBag.Restaurants != null && ViewBag.Restaurants.Count > 0)
+        {
+            @foreach (var restaurant in ViewBag.Restaurants)
+            {
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img class="card-img-top" src="@restaurant.CoverImg" alt="@restaurant.CoverImg">
+                        <div class="card-body">
+                            <h5 class="card-title">@restaurant.Name</h5>
+                            <p class="card-text">@restaurant.Desc</p>
+                            <a asp-controller="MasaRezervasyon"
+                               asp-action="Index"
+                               asp-route-restaurantId="@restaurant.Id"
+                               class="btn btn-primary"> Rezervasyon Yap </a>
+                        </div>
+                        <div class="card-footer text-right">
+                            <small class="text-muted">@restaurant.LastRezervationText</small>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+    <br />
+    <br />
+    <br />
+</div>

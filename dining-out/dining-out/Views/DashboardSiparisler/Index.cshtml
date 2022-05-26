@@ -1,0 +1,195 @@
+﻿@model SiparislerVM
+
+@{
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+    ViewData["Title"] = "Dashboard - Restaurant Rezervasyon Siparişleri";
+}
+
+<br />
+<div>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="new-rez" data-toggle="tab" href="#newrez" role="tab" aria-controls="newrez" aria-selected="true">Yeni Verilen Siparişler</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="serviced-rez" data-toggle="tab" href="#servicedrez" role="tab" aria-controls="servicedrez" aria-selected="false">Servis Edilen Siparişler</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="other-rez" data-toggle="tab" href="#otherrez" role="tab" aria-controls="otherrez" aria-selected="false">Kapatılan Siparişler</a>
+        </li>
+    </ul>
+    <form asp-action="SiparisDurumGüncelle" asp-controller="DashboardSiparisler" method="post">
+        <div class="tab-content text-center" id="myTabContent">
+            <br />
+            <div class="form-row">
+                <div class="col-lg-12 ">
+                    @if (ViewBag.BasariliSiparisGuncelle != null && ViewBag.BasariliSiparisGuncelle == false)
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.Mesaj
+                        </div>
+                    }
+                    else if (ViewBag.BasariliSiparisGuncelle != null && ViewBag.BasariliSiparisGuncelle == true)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            @ViewBag.Mesaj
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane fade show active" id="newrez" role="tabpanel" aria-labelledby="new-rez-tab">
+                <div class="shadow p-3 mb-5 bg-white rounded">
+                    @if (Model.newOrderedItems != null && Model.newOrderedItems.Count > 0)
+                    {
+                        <table id="newordered-table" class="table table-striped table-bordered" style="width:95%">
+                            <thead>
+                                <tr>
+                                    <th>Seçim</th>
+                                    <th>Rezervasyon Numarası</th>
+                                    <th>Restaurant İsmi</th>
+                                    <th>Menu Seçimi</th>
+                                    <th>Sipariş Veren</th>
+                                    <th>Fiyat</th>
+                                    <th>Sipariş Tarihi</th>
+                                    <th>Sipariş Durumu</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.newOrderedItems.Count; ++i)
+                                {
+                                    <tr>
+                                        <th class="text-center">
+                                            <input class="form-check-input" type="checkbox" name="secilenSiparis_@Model.newOrderedItems[i].Id">
+                                        </th>
+                                        <td>@Model.newOrderedItems[i].RezervationId</td>
+                                        <td>@Model.newOrderedItems[i].RestaurantName</td>
+                                        <td>@Model.newOrderedItems[i].MenuItemName</td>
+                                        <td>@Model.newOrderedItems[i].UserName</td>
+                                        <td>@Model.newOrderedItems[i].Price</td>
+                                        <td>@Model.newOrderedItems[i].OrderedDate</td>
+                                        <td>
+                                            <select class="form-select" name="siparisDurum_@Model.newOrderedItems[i].Id">
+                                                @foreach (var siparisDurum in Model.SiparisDurumlar)
+                                                {
+                                                    <option value="@siparisDurum">@siparisDurum</option>
+                                                }
+                                            </select>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" name="siparisGüncelle1" value="siparisGüncelle1" class="btn btn-primary">Sipariş Durum Güncelle</button>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <span class="text-primary">Henüz yeni sipariş bulunmamaktadır</span>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane fade" id="servicedrez" role="tabpanel" aria-labelledby="active-rez-tab">
+                <div class="shadow p-3 mb-5 bg-white rounded">
+                    @if (Model.servicedOrderedItems != null && Model.servicedOrderedItems.Count > 0)
+                    {
+                        <table id="servicedordered-table" class="table table-striped table-bordered" style="width:95%">
+                            <thead>
+                                <tr>
+                                    <th>Seçim</th>
+                                    <th>Rezervasyon Numarası</th>
+                                    <th>Restaurant İsmi</th>
+                                    <th>Menu Seçimi</th>
+                                    <th>Sipariş Veren</th>
+                                    <th>Fiyat</th>
+                                    <th>Sipariş Tarihi</th>
+                                    <th>Sipariş Durumu</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.servicedOrderedItems.Count; ++i)
+                                {
+                                    <tr>
+                                        <th class="text-center">
+                                            <input class="form-check-input" type="checkbox" name="secilenSiparis_@Model.servicedOrderedItems[i].Id">
+                                        </th>
+                                        <td>@Model.servicedOrderedItems[i].RezervationId</td>
+                                        <td>@Model.servicedOrderedItems[i].RestaurantName</td>
+                                        <td>@Model.servicedOrderedItems[i].MenuItemName</td>
+                                        <td>@Model.servicedOrderedItems[i].UserName</td>
+                                        <td>@Model.servicedOrderedItems[i].Price</td>
+                                        <td>@Model.servicedOrderedItems[i].OrderedDate</td>
+                                        <td>
+                                            <select class="form-select" name="siparisDurum_@Model.servicedOrderedItems[i].Id">
+                                                @foreach (var siparisDurum in Model.SiparisDurumlar)
+                                                {
+                                                    <option value="@siparisDurum">@siparisDurum</option>
+                                                }
+                                            </select>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="form-row">
+                            <div class="col-lg-9">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" name="siparisGüncelle2" value="siparisGüncelle2" class="btn btn-primary">Sipariş Durum Güncelle</button>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <span class="text-primary">Henüz servis edilen sipariş bulunmamaktadır</span>
+                    }
+                </div>
+            </div>
+            <div class="tab-pane fade" id="otherrez" role="tabpanel" aria-labelledby="active-rez-tab">
+                <div class="shadow p-3 mb-5 bg-white rounded">
+                    @if (Model.otherOrderedItems != null && Model.otherOrderedItems.Count > 0)
+                    {
+                        <table id="otherordered-table" class="table table-striped table-bordered" style="width:95%">
+                            <thead>
+                                <tr>
+                                    <th>Rezervasyon Numarası</th>
+                                    <th>Restaurant İsmi</th>
+                                    <th>Menu Seçimi</th>
+                                    <th>Sipariş Veren</th>
+                                    <th>Fiyat</th>
+                                    <th>Sipariş Tarihi</th>
+                                    <th>Sipariş Durumu</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for (int i = 0; i < Model.otherOrderedItems.Count; ++i)
+                                {
+                                    <tr>
+                                        <td>@Model.otherOrderedItems[i].RezervationId</td>
+                                        <td>@Model.otherOrderedItems[i].RestaurantName</td>
+                                        <td>@Model.otherOrderedItems[i].MenuItemName</td>
+                                        <td>@Model.otherOrderedItems[i].UserName</td>
+                                        <td>@Model.otherOrderedItems[i].Price</td>
+                                        <td>@Model.otherOrderedItems[i].OrderedDate</td>
+                                        <td>@Model.otherOrderedItems[i].StatusText</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    else
+                    {
+                        <span class="text-primary">Henüz kapatılan sipariş bulunmamaktadır</span>
+                    }
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

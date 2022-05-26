@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Restaurant Arama";
+}
+<br/>
+<div class="text-center">
+    @{ Html.RenderPartialAsync("RestaurantSearch"); }
+</div>
+<br />
+<div>
+    @{ Html.RenderPartialAsync("RestaurantSearchResult");}
+</div>

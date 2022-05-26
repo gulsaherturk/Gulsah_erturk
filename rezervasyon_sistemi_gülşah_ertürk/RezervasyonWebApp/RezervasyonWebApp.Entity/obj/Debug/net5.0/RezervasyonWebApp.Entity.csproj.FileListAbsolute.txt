@@ -1,0 +1,15 @@
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\RezervasyonWebApp.Entity.deps.json
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\RezervasyonWebApp.Entity.runtimeconfig.json
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\RezervasyonWebApp.Entity.runtimeconfig.dev.json
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\RezervasyonWebApp.Entity.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\ref\RezervasyonWebApp.Entity.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\bin\Debug\net5.0\RezervasyonWebApp.Entity.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\ref\RezervasyonWebApp.Entity.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Entity\obj\Debug\net5.0\RezervasyonWebApp.Entity.genruntimeconfig.cache
