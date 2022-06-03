@@ -11,7 +11,9 @@
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.17"
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
+          "RezervasyonWebApp.Data": "1.0.0",
+          "RezervasyonWebApp.Entity": "1.0.0"
         },
         "runtime": {
           "RezervasyonWebApp.Business.dll": {}
@@ -346,7 +348,26 @@
           }
         }
       },
-      "System.Memory/4.5.3": {}
+      "System.Memory/4.5.3": {},
+      "RezervasyonWebApp.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "RezervasyonWebApp.Entity": "1.0.0"
+        },
+        "runtime": {
+          "RezervasyonWebApp.Data.dll": {}
+        }
+      },
+      "RezervasyonWebApp.Entity/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17"
+        },
+        "runtime": {
+          "RezervasyonWebApp.Entity.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -564,6 +585,16 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "RezervasyonWebApp.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RezervasyonWebApp.Entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

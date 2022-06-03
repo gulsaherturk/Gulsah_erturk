@@ -403,6 +403,22 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "RezervasyonWebApp.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "RezervasyonWebApp.Data": "1.0.0",
+          "RezervasyonWebApp.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RezervasyonWebApp.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RezervasyonWebApp.Business.dll": {}
+        }
+      },
       "RezervasyonWebApp.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1130,6 +1146,11 @@
         "version.txt"
       ]
     },
+    "RezervasyonWebApp.Business/1.0.0": {
+      "type": "project",
+      "path": "../RezervasyonWebApp.Business/RezervasyonWebApp.Business.csproj",
+      "msbuildProject": "../RezervasyonWebApp.Business/RezervasyonWebApp.Business.csproj"
+    },
     "RezervasyonWebApp.Data/1.0.0": {
       "type": "project",
       "path": "../RezervasyonWebApp.Data/RezervasyonWebApp.Data.csproj",
@@ -1147,6 +1168,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "RezervasyonWebApp.Business >= 1.0.0",
       "RezervasyonWebApp.Data >= 1.0.0"
     ]
   },
@@ -1182,6 +1204,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Business\\RezervasyonWebApp.Business.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Business\\RezervasyonWebApp.Business.csproj"
+            },
             "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Data\\RezervasyonWebApp.Data.csproj": {
               "projectPath": "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Data\\RezervasyonWebApp.Data.csproj"
             }

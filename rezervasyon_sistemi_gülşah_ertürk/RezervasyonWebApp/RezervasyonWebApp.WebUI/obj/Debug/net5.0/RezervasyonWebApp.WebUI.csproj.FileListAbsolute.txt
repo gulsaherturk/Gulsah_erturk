@@ -52,7 +52,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.TagHelpers.output.cache
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.RazorCoreGenerate.cache
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -70,3 +69,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Entity.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Data.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Entity.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Business.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Business.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Home\Iletisim.cshtml.g.cs

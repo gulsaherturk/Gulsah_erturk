@@ -402,6 +402,35 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "RezervasyonWebApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "RezervasyonWebApp.Entity": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/RezervasyonWebApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RezervasyonWebApp.Data.dll": {}
+        }
+      },
+      "RezervasyonWebApp.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/RezervasyonWebApp.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RezervasyonWebApp.Entity.dll": {}
+        }
       }
     }
   },
@@ -1100,6 +1129,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "RezervasyonWebApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../RezervasyonWebApp.Data/RezervasyonWebApp.Data.csproj",
+      "msbuildProject": "../RezervasyonWebApp.Data/RezervasyonWebApp.Data.csproj"
+    },
+    "RezervasyonWebApp.Entity/1.0.0": {
+      "type": "project",
+      "path": "../RezervasyonWebApp.Entity/RezervasyonWebApp.Entity.csproj",
+      "msbuildProject": "../RezervasyonWebApp.Entity/RezervasyonWebApp.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1107,7 +1146,9 @@
       "Microsoft.EntityFrameworkCore >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.17",
-      "Microsoft.EntityFrameworkCore.Tools >= 5.0.17"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "RezervasyonWebApp.Data >= 1.0.0",
+      "RezervasyonWebApp.Entity >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1141,7 +1182,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Data\\RezervasyonWebApp.Data.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Data\\RezervasyonWebApp.Data.csproj"
+            },
+            "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Entity\\RezervasyonWebApp.Entity.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Projects\\rezervasyon_sistemi_gülşah_ertürk\\RezervasyonWebApp\\RezervasyonWebApp.Entity\\RezervasyonWebApp.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

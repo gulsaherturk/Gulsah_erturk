@@ -37,6 +37,7 @@
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.17",
+          "RezervasyonWebApp.Business": "1.0.0",
           "RezervasyonWebApp.Data": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -643,6 +644,20 @@
         }
       },
       "System.Memory/4.5.3": {},
+      "RezervasyonWebApp.Business/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "RezervasyonWebApp.Data": "1.0.0",
+          "RezervasyonWebApp.Entity": "1.0.0"
+        },
+        "runtime": {
+          "RezervasyonWebApp.Business.dll": {}
+        },
+        "compile": {
+          "RezervasyonWebApp.Business.dll": {}
+        }
+      },
       "RezervasyonWebApp.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.17",
@@ -2571,6 +2586,11 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "RezervasyonWebApp.Business/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "RezervasyonWebApp.Data/1.0.0": {
       "type": "project",

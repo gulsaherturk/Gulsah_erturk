@@ -13,3 +13,8 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\ref\RezervasyonWebApp.Business.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.genruntimeconfig.cache
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Data.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Entity.dll
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Data.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Entity.pdb
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.csproj.CopyComplete

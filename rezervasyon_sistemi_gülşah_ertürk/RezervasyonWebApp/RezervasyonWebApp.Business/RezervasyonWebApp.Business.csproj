@@ -17,4 +17,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RezervasyonWebApp.Data\RezervasyonWebApp.Data.csproj" />
+    <ProjectReference Include="..\RezervasyonWebApp.Entity\RezervasyonWebApp.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

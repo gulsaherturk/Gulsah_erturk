@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using RezervasyonWebApp.Business.Abstract;
 using RezervasyonWebApp.WebUI.Models;
 using System;
 using System.Collections.Generic;
@@ -11,27 +13,53 @@ namespace RezervasyonWebApp.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private ISehirService _sehirService;
+        private IGuzergahService _guzergahService;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ISehirService sehirService, IGuzergahService guzergahService)
         {
-            _logger = logger;
+            this._sehirService = sehirService;
+            this._guzergahService = guzergahService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string nereden, string nereye)
         {
+            if (nereden == null || nereye == null || nereden == nereye)
+            {
+                var sehirModel = new BiletGuzergah()
+                {
+                    Sehirs = _sehirService.GetAll(),
+                    Guzergahs = null
+                };
+
+                ViewBag.Sehirler = new SelectList(sehirModel.Sehirs, "SehirId", "SehirAd");
+                return View(sehirModel);
+            }
+            else
+            {
+                var sehirModel = new BiletGuzergah()
+                {
+                    Sehirs = _sehirService.GetAll(),
+                    Guzergahs = _guzergahService.GetYolculuk(nereden, nereye)
+                };
+                TempData["nereden"] = _guzergahService.GetNereden(nereden);
+                TempData["nereye"] = _guzergahService.GetNereye(nereye);
+                ViewBag.Sehirler = new SelectList(sehirModel.Sehirs, "SehirId", "SehirAd");
+                return View(sehirModel);
+            }
+
+
+
+        }
+        public IActionResult Iletisim()
+        {
+            ViewData["title"] = "İletişim - ";
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+
+
     }
 }
