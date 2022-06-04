@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using RezervasyonWebApp.Business.Abstract;
+using RezervasyonWebApp.Business.Concreate;
+using RezervasyonWebApp.Data.Abstract;
 using RezervasyonWebApp.Data.Concrete.EfCore;
 using System;
 using System.Collections.Generic;
@@ -17,6 +20,7 @@ namespace RezervasyonWebApp.WebUI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -24,6 +28,13 @@ namespace RezervasyonWebApp.WebUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IBiletRepository, EfCoreBiletRepository>();
+
+            services.AddScoped<IBiletService, BiletManager>();
+            services.AddScoped<IGuzergahRepository, EfCoreGuzergahRepository>();
+            services.AddScoped<IGuzergahService, GuzergahManager>();
+            services.AddScoped<ISehirRepository, EfCoreSehirRepository>();
+            services.AddScoped<ISehirService, SehirManager>();
             services.AddControllersWithViews();
         }
 

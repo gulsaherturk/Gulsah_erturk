@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RezervasyonWebApp.Business.Concreate
 {
-    class BiletManager:IBiletService
+   public class BiletManager:IBiletService
     {
         private IBiletRepository _biletRepository;
         public BiletManager(IBiletRepository biletRepository)

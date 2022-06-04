@@ -72,3 +72,10 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Business.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.Business.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Home\Iletisim.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_noyolculuk.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_yolculuk.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_footer.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Yolculuk\Basarili.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Yolculuk\Details.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Admin\AdminList.cshtml.g.cs

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RezervasyonWebApp.Business.Concreate
 {
-    class SehirManager:ISehirService
+  public  class SehirManager:ISehirService
     {
         private ISehirRepository _sehirRepository;
         public SehirManager(ISehirRepository sehirRepository)

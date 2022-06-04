@@ -15,26 +15,27 @@ namespace RezervasyonWebApp.WebUI.Controllers
     {
         private ISehirService _sehirService;
         private IGuzergahService _guzergahService;
-
-
-        public HomeController(ISehirService sehirService, IGuzergahService guzergahService)
+        public HomeController(ISehirService sehirService,IGuzergahService guzergahService)
         {
             this._sehirService = sehirService;
             this._guzergahService = guzergahService;
+
         }
 
-        public IActionResult Index(string nereden, string nereye)
+       
+      
+        public IActionResult Index(string nereden,string nereye)
         {
-            if (nereden == null || nereye == null || nereden == nereye)
+            if (nereden==null || nereye==null || nereden==nereye)
             {
                 var sehirModel = new BiletGuzergah()
                 {
                     Sehirs = _sehirService.GetAll(),
                     Guzergahs = null
                 };
-
                 ViewBag.Sehirler = new SelectList(sehirModel.Sehirs, "SehirId", "SehirAd");
                 return View(sehirModel);
+
             }
             else
             {
@@ -48,7 +49,7 @@ namespace RezervasyonWebApp.WebUI.Controllers
                 ViewBag.Sehirler = new SelectList(sehirModel.Sehirs, "SehirId", "SehirAd");
                 return View(sehirModel);
             }
-
+         
 
 
         }
@@ -57,8 +58,7 @@ namespace RezervasyonWebApp.WebUI.Controllers
             ViewData["title"] = "İletişim - ";
             return View();
         }
-
-
+    
 
 
     }
