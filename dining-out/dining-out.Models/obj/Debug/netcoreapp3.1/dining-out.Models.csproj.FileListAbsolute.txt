@@ -22,3 +22,16 @@ C:\Users\cigde\Desktop\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dini
 C:\Users\cigde\Desktop\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.AssemblyInfo.cs
 C:\Users\cigde\Desktop\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.csproj.CoreCompileInputs.cache
 C:\Users\cigde\Desktop\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.genruntimeconfig.cache
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\bin\Debug\netcoreapp3.1\dining-out.Models.deps.json
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\bin\Debug\netcoreapp3.1\dining-out.Models.runtimeconfig.json
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\bin\Debug\netcoreapp3.1\dining-out.Models.runtimeconfig.dev.json
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\bin\Debug\netcoreapp3.1\dining-out.Models.dll
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\bin\Debug\netcoreapp3.1\dining-out.Models.pdb
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.dll
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.pdb
+C:\Users\ACER\Desktop\Projects\dining-out\dining-out.Models\obj\Debug\netcoreapp3.1\dining-out.Models.genruntimeconfig.cache
