@@ -5,7 +5,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.runtimeconfig.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.runtimeconfig.dev.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.dll
-C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\ref\RezervasyonWebApp.WebUI.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.Views.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\bin\Debug\net5.0\RezervasyonWebApp.WebUI.Views.pdb
@@ -46,7 +45,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.RazorAssemblyInfo.cache
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.RazorAssemblyInfo.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\staticwebassets\RezervasyonWebApp.WebUI.StaticWebAssets.Manifest.cache
-C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\staticwebassets\RezervasyonWebApp.WebUI.StaticWebAssets.xml
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\scopedcss\bundle\RezervasyonWebApp.WebUI.styles.css
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.TagHelpers.input.cache
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\RezervasyonWebApp.WebUI.TagHelpers.output.cache
@@ -79,3 +77,4 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Yolculuk\Basarili.cshtml.g.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Yolculuk\Details.cshtml.g.cs
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\Razor\Views\Admin\AdminList.cshtml.g.cs
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.WebUI\obj\Debug\net5.0\refint\RezervasyonWebApp.WebUI.dll

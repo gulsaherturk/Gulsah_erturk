@@ -2,7 +2,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Business.runtimeconfig.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Business.runtimeconfig.dev.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Business.dll
-C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\ref\RezervasyonWebApp.Business.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Business.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.csproj.AssemblyReference.cache
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.GeneratedMSBuildEditorConfig.editorconfig
@@ -18,3 +17,4 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Data.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\bin\Debug\net5.0\RezervasyonWebApp.Entity.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\RezervasyonWebApp.Business.csproj.CopyComplete
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Business\obj\Debug\net5.0\refint\RezervasyonWebApp.Business.dll

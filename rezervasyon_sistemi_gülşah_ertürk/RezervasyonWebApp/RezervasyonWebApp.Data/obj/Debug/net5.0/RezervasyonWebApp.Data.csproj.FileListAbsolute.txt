@@ -2,7 +2,6 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Data.runtimeconfig.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Data.runtimeconfig.dev.json
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Data.dll
-C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\ref\RezervasyonWebApp.Data.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Data.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Entity.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\bin\Debug\net5.0\RezervasyonWebApp.Entity.pdb
@@ -16,3 +15,4 @@ C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonW
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\obj\Debug\net5.0\ref\RezervasyonWebApp.Data.dll
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\obj\Debug\net5.0\RezervasyonWebApp.Data.pdb
 C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\obj\Debug\net5.0\RezervasyonWebApp.Data.genruntimeconfig.cache
+C:\Users\ACER\Desktop\Projects\rezervasyon_sistemi_gülşah_ertürk\RezervasyonWebApp\RezervasyonWebApp.Data\obj\Debug\net5.0\refint\RezervasyonWebApp.Data.dll
